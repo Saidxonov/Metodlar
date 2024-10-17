@@ -156,12 +156,12 @@
 // console.log(res);
 
 // 3. Sonlar ketma-ketligini teskari tartibda ko‘rsating.
-let numbers = [1, 9, 2, 8, 3, 7, 4, 6, 5];
-let res = numbers.sort(function (a, b) {
-  return b - a;
-});
-let result = res.reverse();
-console.log(result);
+// let numbers = [1, 9, 2, 8, 3, 7, 4, 6, 5];
+// let res = numbers.sort(function (a, b) {
+//   return b - a;
+// });
+// let result = res.reverse();
+// console.log(result);
 
 // 7. ToString
 
@@ -232,3 +232,142 @@ console.log(result);
 // numbers.unshift(0);
 // numbers.pop();
 // console.log(numbers);
+
+// --------------> Qiyinroq masalalar <--------------
+
+// 1. **Massivning uzunligi**
+
+// let arr = [1, 3, 6, 8, 7];
+
+// if (arr.length % 2 == 1) {
+//   arr.splice(Math.trunc(arr.length / 2), 1);
+//   console.log(arr);
+// } else {
+//   let first = arr.slice(0, Math.trunc(arr.length / 2));
+//   let last = arr.slice(Math.trunc(arr.length / 2));
+//   console.log(first);
+//   console.log(last);
+// }
+
+// 2. **Massivni birlashtirish va filtr qilish**
+
+// let massiv1 = [1, "salom", 3, "olim", 5];
+// let massiv2 = ["Alisher", 7, "ustoz", "najot", 10];
+
+// let massiv = massiv1.concat(massiv2);
+
+// let son = massiv.filter((element) => typeof element === "number");
+
+// console.log(son);
+
+// 3. **Elementlarni qidirish va qo'shish**
+
+// let massiv = ["salom", "Alisher", "ustoz"];
+// let qidirilayotganElement = "Alisher";
+// let yangiElement = "najot";
+
+// let index = massiv.indexOf(qidirilayotganElement);
+
+// if (index !== -1) {
+//   massiv.splice(index, 1);
+//   console.log(`${qidirilayotganElement} elementi massivdan olib tashlandi`);
+// } else {
+//   massiv.push(yangiElement);
+//   console.log(
+//     `${qidirilayotganElement} elementi topilmadi ${yangiElement} massivga qo'shildi`
+//   );
+// }
+
+// console.log(massiv);
+
+// 4. **Massivdagi elementlarning indekslari**
+
+// let massiv = [1, 2, 3, 1, 4, 5];
+// let qidirilayotganElement = 1;
+
+// let index1 = massiv.indexOf(qidirilayotganElement);
+// let index2 = massiv.lastIndexOf(qidirilayotganElement);
+
+// let yangiMassiv = massiv.slice(index1, index2 + 1);
+
+// console.log(yangiMassiv);
+
+// 5. **Sonlarni tartiblab, so'zlarni teskari qilish**
+
+// let massiv = [3, "salom", 1, "olam", 2, "ustoz"];
+
+// let sonlar = [];
+// let sozlar = [];
+
+// for (let i = 0; i < massiv.length; i++) {
+//   if (typeof massiv[i] === "number") {
+//     sonlar.push(massiv[i]);
+//   } else {
+//     sozlar.push(massiv[i]);
+//   }
+// }
+
+// sonlar.sort(function (a, b) {
+//   return a - b;
+// });
+
+// sozlar.reverse();
+
+// let natija = sonlar.concat(sozlar);
+
+// console.log(natija);
+
+// 6. **Massivni o'zgartirib matn yaratish**
+
+// let massiv = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// for (let i = 0; i < massiv.length; i++) {
+//   massiv[i] *= 2;
+// }
+
+// massiv.toString();
+// console.log(massiv);
+
+// 7. **Qo'shma matn yaratish**
+// let arr1 = [1, 3, null, "salom", "hayr"];
+// let arr2 = [1, 3, 5, 8];
+// let arr3 = ["hello", 5, true];
+// let res = arr1.concat(arr2, arr3);
+// let text = result.join("-").toLowerCase();
+// console.log(text);
+
+// 8. **Massivni yangilash va matnga aylantirish**
+
+// let massiv = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// massiv.pop();
+// massiv.shift();
+
+// let matn = massiv.join(":");
+
+// console.log(matn);
+
+// 9. **Massivni o'zgartirib element qo'shish**
+
+// let massiv = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// massiv.push(43);
+// massiv.unshift(31);
+// massiv.sort((a, b) => a - b);
+// let oxirgiUchta = massiv.slice(massiv.length - 3);
+
+// console.log(oxirgiUchta);
+
+// 10. **Elementlarni aylantirish va tartiblash**
+
+// let massiv = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// massiv.reverse();
+
+// massiv.splice(0, 2);
+
+// massiv.splice(massiv.length - 3, 3);
+
+// massiv.sort((a, b) => a - b);
+
+// console.log(massiv);
